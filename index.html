@@ -13,7 +13,10 @@
 .menu{
     background:#DC2626;
     text-align:center;
-    padding:15px;
+    padding:2px;
+	position: sticky;
+	top:0;
+	z-index:1000;
 }
 .menu a{
     display:inline-block;
@@ -27,6 +30,31 @@
 .menu a:hover{
     color:yellow;
 	transition:0.3s;
+}
+.dropdown {
+        display: inline-block;
+        position: relative;
+}
+.dropdown-menu {
+            display: none;
+            position: absolute;
+            background-color: white;
+            padding: 10px;
+            list-style-type: none;
+            text-align: left;
+            margin: 0;
+}
+.dropdown-menu a {
+              color: black;
+              text-decoration: none;
+              display: block;
+              padding: 5px;
+}
+.dropdown-menu a:hover {
+                    background-color: yellow;
+}
+.dropdown:hover .dropdown-menu {
+                            display: block;  
 }
 .banner{
     background:linear-gradient(90deg,#1E3A8A,#2563EB);
@@ -96,30 +124,38 @@ footer{
 		<p>SELAMAT DATANG KE LAMAN WEB SAYA</p>
 	</div>
 	<div class="profile">
-	    <img src="gambar.png">
+	    <img src="gambar laman web/gambar.png">
 	</div>
 	<div class="menu">
 	    <a href="#utama">UTAMA</a>
 		<a href="#tentang">TENTANG SAYA</a>
 		<a href="#galeri">GALERI</a>
     </div>	
-    <div style="text-align:center; margin:30px;">	
-	    <label for="kegemaran">KEGEMARAN:</label>
-		<select id="kegemaran">
-		    <option>Makanan</option>
-			<option>Sukan</option>
-			<option>Tempat Menarik</option>
-	    </select>	
-    </div>		
+ <div style="text-align:center; margin:30px;">
+	       <div class="dropdown">
+		       <span style="color:#38BDF8; font-size:20px; cursor:pointer; font-weight:bold;">
+			   KEGEMARAN &#9660;
+		     </span>
+		     <ul class="dropdown-menu">
+		     <li><a href="#makanan">Makanan: Nasi Lemak Ayam Goreng</a></li>
+		     <li><a href="#memanah">sukan: Memanah</a></li>
+		     <li><a href="#turkey">Tempat Menarik</a></li>
+         </ul> 
+     </div>    
+</div>
 	<div id="galeri">
 	    <h1 style="text-align:center; color:#38BDF8;">GALERI</h1>
     <div class="gallery">
-        <img src="dekat sekolah.jpg">
-        <img src="memanah.jpg">
-		<img src="memanah(2).jpg">
-		<img src="memanah(6).jpg">
-		<img src="gambar sorang.jpg">
-		<img src="citacita(1).jpg">
+	<a href="https://www.google.com/search?q=Sekolah+Menengah+Kebangasaan+ST.+Paul.">
+        <img src="gambar laman web/dekat sekolah.jpg">
+		</a>
+        <img src="gambar laman web/memanah.jpg">
+		<img src="gambar laman web/memanah(2).jpg">
+		<img src="gambar laman web/memanah(6).jpg">
+		<img src="gambar laman web/gambar sorang.jpg">
+		<a href="https://www.google.com/search?q=juruterbang">
+		 <img src="gambar laman web/citacita(1).jpg">
+		</a>
 	</div>
 </div> 
 	    <div class="main">
@@ -135,6 +171,24 @@ footer{
 		</p>
 	    </div>
     </div> 
+<div id="memanah" style="text-align:center; margin:50px;">
+    <h1 style="color:#38BDF8;">SUKAN KEGEMARAN</h1>
+    <p style="font-size:22px; color:#E2E8F0;">Sukan kegemaran saya ialah <a href="https://www.google.com/search?q=Memanah&udm=50">Memanah.</a></p>
+</div>
+<div id="makanan" style="text-align:center; margin:50px;">
+    <h1 style="color:#38BDF8;">MAKANAN KEGEMARAN</h1>
+    <p style="font-size:22px; color:#E2E8F0;">Makanan kegemaran saya ialah <a href="https://www.google.com/search?q=Nasi Lemak Ayam Goreng">Nasi Lemak Ayam Goreng.</a></p>
+</div>
+<div id="turkey" style="text-align:center; margin:50px;">
+    <h1 style="color:#38BDF8;">TEMPAT MENARIK</h1>
+	<p style="font-size:22px; color:#E2E8F0;">Tempat yang saya ingat dan suka akannya ialah <a href="https://www.google.com/search?tbm=isch&q=tempat+menarik+di+Turki"> Turkey.</a></P>
+</div>
+<div style="text-align:center; margin:50px;">
+    <h2 style="color:#38BDF8;">KOMEN</h2>
+    <textarea rows="5" cols="50" placeholder="Tulis komen anda di sini..."></textarea>
+    <br><br>
+    <button>HANTAR</button>
+</div>
 	<div class="footer">
     <p>© 2026 BIODATA ARYAN ILMAN | Dibina Menggunakan HTML & CSS</p>
 </div>
